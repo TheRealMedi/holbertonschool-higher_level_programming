@@ -6,7 +6,7 @@ class Square:
     """Representation of Square class."""
 
     def __init__(self, size=8):
-        """Initializing Square
+        """Initializing Square.
         """
         self.size = size
 
@@ -26,3 +26,12 @@ class Square:
         if value < 0:
             raise ValueError("size must be >=0")
         self.__size = value
+
+    def my_print(self):
+        """Print the square."""
+        if self.__size == 0:
+            print()
+        for i in range(0, self.__size):
+            [print('#', end="") for j in range(self.__size)]
+            print()
+        print()
