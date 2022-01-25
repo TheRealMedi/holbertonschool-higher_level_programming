@@ -8,7 +8,7 @@ class Rectangle:
     """
     Representation of a Rectangle.
     """
-    
+
     def __init__(self, width=0, height=0):
         """
         Initializing New Rectangle.
@@ -62,6 +62,7 @@ class Rectangle:
         Returns the perimeter of the Rectangle.
         """
         return (self.width * self.height)
+
     def perimeter(self):
         """
         Returns the perimeter of the Rectangle.
