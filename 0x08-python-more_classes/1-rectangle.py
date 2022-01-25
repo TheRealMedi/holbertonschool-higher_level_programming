@@ -13,8 +13,13 @@ class Rectangle:
         """
         Initializing New Rectangle.
         Arguments:
-            width: The width of the new rectangle as an integer.
+            width:  The width of the new rectangle as an integer.
             height: The height of the new rectangle as an integer.
+        Raises:
+            TypeError   (Width): Must be an integer.
+            ValueError  (Width): must be >= 0.
+            TypeError  (Height): Must be an integer.
+            ValueError (Height): Must be >= 0.
         """
         self.width = width
         self.height = height
