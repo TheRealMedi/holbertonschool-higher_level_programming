@@ -1,13 +1,16 @@
 #!/usr/bin/python3
 """
-Prints a text with 2 new lines.
+Definning a text identation function.
 """
 
 
 def text_indentation(text):
     """
+    Prints a text with 2 new lines.
     Arguments:
+        dataype:
     Raises:
+        TypeError (text): Text must be a string.
     """
 
     if not isinstance(text, str):
