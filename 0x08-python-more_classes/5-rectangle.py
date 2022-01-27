@@ -85,7 +85,7 @@ class Rectangle:
             str = str + '\n'
         str = str[0:-1]
         return(str)
-        
+
     def __repr__(self):
         """
         Return the string representation of the Rectangle.
