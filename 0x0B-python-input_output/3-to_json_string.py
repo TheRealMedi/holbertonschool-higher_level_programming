@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Definning a function wich appends a string.
+Definning a function which returns a JSON Rep.
 """
 import json
 
