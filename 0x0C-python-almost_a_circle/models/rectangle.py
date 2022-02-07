@@ -52,4 +52,4 @@ class Rectangle(Base):
         """
         Getting the Y coordinate of the Rectangle.
         """
-        return self.y
+        return self.__y
