@@ -3,6 +3,7 @@
 Definning a Base Model class.
 """
 
+
 class Base:
     """
     Represents the Base model.
@@ -22,4 +23,3 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
-        
