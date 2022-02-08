@@ -52,7 +52,10 @@ class Square(Rectangle):
         if args and len(args) != 0:
             for i in range(len(args)):
                 if i == 0:
-                    self.id = args[i]
+                    if args is None:
+                        self.__init__(self.size, self.x, self.y)
+                    else:
+                        self.id = args[i]
                 if i == 1:
                     self.width = args[i]
                     self.height = args[i]
