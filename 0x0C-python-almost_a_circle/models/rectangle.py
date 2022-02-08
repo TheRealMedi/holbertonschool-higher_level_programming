@@ -101,7 +101,26 @@ class Rectangle(Base):
             print(" " * self.x, end='')
             print("#" * self.width)
 
+    def update(self, *args):
+        """
+        Updater for the Rectangle data.
+        """
+        if args and len(args) != 0:
+            for i in range(len(args)):
+                if i == 0:
+                    self.id = args[i]
+                if i == 1:
+                    self.width = args[i]
+                if i == 2:
+                    self. height = args[i]
+                if i == 3:
+                    self.x = args[i]
+                if i == 4:
+                    self.y = args[i]
+
     def __str__(self):
-        """"""
+        """
+        Return a Standard print().
+        """
         return "[Rectangle] ({}) {}/{} - {}/{}".format(
             self.id, self.x, self.y, self.width, self.height)
