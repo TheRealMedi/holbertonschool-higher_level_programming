@@ -101,7 +101,7 @@ class Rectangle(Base):
             print(" " * self.x, end='')
             print("#" * self.width)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """
         Updater for the Rectangle data.
         """
@@ -117,6 +117,10 @@ class Rectangle(Base):
                     self.x = args[i]
                 if i == 4:
                     self.y = args[i]
+        else:
+            for key, value in kwargs.items():
+                if hasattr(self, key):
+                    setattr(self, key, value)
 
     def __str__(self):
         """
