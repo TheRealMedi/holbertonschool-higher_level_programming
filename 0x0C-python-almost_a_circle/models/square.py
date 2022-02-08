@@ -46,6 +46,7 @@ class Square(Rectangle):
                 2nd arg: means size attribute.
                 3rd arg: means x coordinate atribute.
                 4th arg: means y coordinate attribute.
+
             **kwargs (dict): Key/Value pair of attributes.
         """
         if args and len(args) != 0:
@@ -63,6 +64,17 @@ class Square(Rectangle):
             for key, value in kwargs.items():
                 if hasattr(self, key):
                     setattr(self, key, value)
+
+    def to_dictionary(self):
+        """
+        Returns a dictionary.
+         """
+        return {
+            "id": self.id,
+            "size": self.size,
+            "x": self.x,
+            "y": self.y
+        }
 
     def __str__(self):
         """
