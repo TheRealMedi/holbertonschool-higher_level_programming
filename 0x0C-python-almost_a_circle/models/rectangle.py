@@ -104,6 +104,16 @@ class Rectangle(Base):
     def update(self, *args, **kwargs):
         """
         Updater for the Rectangle data.
+
+        Argumments:
+             *args    (int): New attributee values.
+                1st arg: means id attribute.
+                2nd arg: means Width attribute.
+                3rd arg: means height attribute.
+                4th arg: means x coordinate attribute.
+                5th arg: means y coordinate attribute.
+
+            **kwargs (dict): Key/Value pair of attributes.
         """
         if args and len(args) != 0:
             for i in range(len(args)):
