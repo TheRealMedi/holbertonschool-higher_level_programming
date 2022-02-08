@@ -50,23 +50,25 @@ class Square(Rectangle):
             **kwargs (dict): Key/Value pair of attributes.
         """
         if args and len(args) != 0:
-            for i in range(len(args)):
+            i = 0
+            for arg in args:
                 if i == 0:
-                    if args is None:
+                    if arg is None:
                         self.__init__(self.size, self.x, self.y)
                     else:
-                        self.id = args[i]
-                if i == 1:
-                    self.width = args[i]
-                    self.height = args[i]
-                if 1 == 2:
-                    self.x = args[i]
-                if i == 3:
-                    self.y = args[i]
-        else:
-            for key, value in kwargs.items():
-                if hasattr(self, key):
-                    setattr(self, key, value)
+                        self.id = arg
+                elif i == 1:
+                    self.size = arg
+                elif i == 2:
+                    self.x = arg
+                elif i == 3:
+                    self.y = arg
+                i += 1
+
+            else:
+                for key, value in kwargs.items():
+                    if hasattr(self, key):
+                        setattr(self, key, value)
 
     def to_dictionary(self):
         """
