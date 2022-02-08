@@ -65,10 +65,10 @@ class Square(Rectangle):
                     self.y = arg
                 i += 1
 
-            else:
-                for key, value in kwargs.items():
-                    if hasattr(self, key):
-                        setattr(self, key, value)
+        elif kwargs and len(kwargs) != 0:
+            for key, value in kwargs.items():
+                if hasattr(self, key):
+                    setattr(self, key, value)
 
     def to_dictionary(self):
         """
